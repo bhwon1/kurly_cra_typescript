@@ -1,0 +1,243 @@
+#wrap {
+   width:100%;
+   position:relative;
+   #header {
+    position: relative;
+    z-index: 3;
+    width:100%;background:rgb(255,255, 255);
+    .row1 {
+       width:1050px;
+       margin:0 auto;
+       justify-content: flex-end;
+       .row1-1 {
+         width: 200px;
+         margin: 0 0 0 auto;
+         height:36px;
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+         font-size: 12px;
+          &.on {
+            display: none;
+          }
+          &.login {
+            display: none;
+            position: relative;
+            .login-sub {
+               position: absolute;
+               top: 36px;
+               left: 0;
+               width: 120px;
+               background-color: #fff;
+               font-size: 12px;
+               color: #333;
+               display: none;
+               ul {
+                  padding: 3px 10px;
+                  width: 100%;
+                  border: 1px solid #ccc;
+                  li {
+                     width: 100%;
+                     a {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        height: 24px;
+                        transition: all 0.3s;
+                        &:hover {
+                           color: rgb(95,0, 128);
+                        }
+                     }
+                  }
+               }
+            }
+            .login-member {
+               display: inline-flex;
+               padding: 2px 8px;
+               font-size: 10px;
+               color: rgb(95,0, 128);
+               border: 1px solid rgb(95,0, 128);
+               border-radius: 9px;
+               margin: 0 5px 0 0  ;
+            }
+            &.on {
+               display: flex;
+            }
+          }
+          > a {
+             color:#333;
+             img {
+               width: 8px;
+               margin: 0 0 3px 5px;
+             }
+             &.on {
+                color:rgb(95,0, 128);
+             }               
+          }
+          i {
+             color:#ccc;
+            margin:0 10px;
+            user-select: none;
+          }
+       }
+       .row1-2 {
+          width:1050px;
+          margin: 0 auto;
+          height:64px;
+          display: flex;
+          justify-content: space-between;
+          .left {
+             width:325px;
+             height:100%;
+             display: flex;
+             align-items: center;
+             a {
+                font-size: 18px;
+                &.logo1 {
+                   color:rgb(95,0, 128);
+                   font-weight: 500;
+                }
+                &.logo2 {
+                   color:rgb(181,181, 181);
+                   font-weight: 400;
+                   img {
+                      vertical-align: top;
+                   }
+                }
+                img {width:auto;}
+                span {
+                   margin:0 0 0 15px;
+                   vertical-align: middle;
+                }
+             }
+             i {
+                color:#ccc;
+                margin:0 10px;
+             }
+          }
+          .center {
+              width:400px;
+              height:100%;
+              display: flex;
+              align-items: center;
+              position: relative;
+              input {
+                z-index: 1;
+                position: relative;
+                width: 100%;
+                height: 48px;
+                background: #fff;
+                border:1px solid rgb(95,0, 128);
+                border-radius: 5px;
+                font-size: 15px;
+                padding: 0 15px;
+                &:focus {
+                   outline: 0;
+                }
+              }
+              a {
+                z-index: 2;
+                position:absolute;
+                top:9px;
+                right:1px;
+                display: flex;
+                width:46px;
+                height:46px;
+                align-items: center;
+                justify-content: center;
+                background: #fff;
+                border-radius: 5px;
+                img {
+                   width:35px;
+                }
+              }
+          }
+          .right {
+             width:325px;
+             height:100%;
+             display: flex;
+             align-items: center;
+             justify-content: flex-end;
+             a {
+                margin:0 0 0 20px;
+                img {
+                   width:auto;
+                }
+             }
+          }
+       }
+    }
+    .row2 {
+      width:100%;
+      height:56px;
+      background:#fff;
+      box-shadow:0 2px 4px 0 rgba(0,0,0, .1);
+      &.on{ // 윈도우(window) 스크롤( scroll() ) 이벤트 .row2 선택자의 스크롤 탑값( scrollTop()>=142 )이 row2 위치(142px)에 도달하면 on 클래스를 추가해준다.
+       position:fixed;
+       top:0;
+       left:0;
+       z-index:3;       
+      }
+       .row2-container {
+          width:1050px;
+          height: 100%;
+          margin:0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .left {
+             width:225px;
+             a {
+                vertical-align: middle;
+                font-size: 18px;
+                font-weight: 500;
+                transition: all .3s;
+                &:hover {
+                   color:rgb(95,0, 128);
+                }
+                img {
+                   width:auto;
+                   margin: 0 5px 0 0;                     
+                }
+             }
+          }
+          .center {
+             width:600px;
+             height:56px;
+             display: flex;
+             justify-content:space-around;
+             align-items: center;
+             a {
+                font-size: 16px;
+                font-weight: 500;
+                transition: all .3s;
+                color:rgb(51,51,51);
+                &:hover {
+                   color:rgb(95,0, 128);
+                   text-decoration: underline;
+                }
+             }
+          }
+          .right {
+             width:225px;
+             height:56px;
+             display: flex;
+             justify-content: flex-end;
+             align-items: center;
+             a {
+                display: flex;
+                border:1px solid #ddd;
+                border-radius:16px;
+                width:122px;
+                height:32px;
+                font-size: 13px;
+                align-items: center;
+                justify-content: center;
+                em {color:rgb(95,0, 128);}
+                span {color:rgb(102,102, 102);}
+             }
+          }
+       }
+    }
+ }
+}
